@@ -1,10 +1,4 @@
-//your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
 
-let pupil_size = 8; // Originally 8
-let beak_length = 22; // Originally 22
-let line_weight = 2; // Originally 2
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -21,62 +15,47 @@ function wallpaper_background() {
   background(41, 143, 109); // Green
 }
 
-function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  // Draw bird's body
-  drawBird(70, 50); // Top Left
-  drawBird(150, 50); // Top Right
-  drawBird(70, 120); // Bottom Left
-  drawBird(150, 120); // Bottom Right  
-}
+function my_symbol() {
 
-function drawBird(HeadX, HeadY) {
-  // Draw feet
-  stroke(255, 161, 209); // Pink
-  strokeWeight(line_weight);
-  line(HeadX - 17, HeadY + 30, HeadX - 17, HeadY + 43);
-  line(HeadX - 17, HeadY + 43, HeadX - 9, HeadY + 43);
-  line(HeadX - 4, HeadY + 30, HeadX - 4, HeadY + 43);
-  line(HeadX - 4, HeadY + 43, HeadX + 4, HeadY + 43);
 
-  noStroke();
+  // Beak
+  fill(217, 114, 4); // Dark Orange
+  ellipse(88, 52, 12, 11);
 
-  // Draw beak
-  fill(240, 179, 12); // Orange
-  beginShape();
-  vertex(HeadX + 10, HeadY - 7);
-  vertex(HeadX + beak_length, HeadY + 4);
-  vertex(HeadX + 10, HeadY + 4);
-  endShape(CLOSE);  
-
-  fill(245, 245, 44); // Yellow
-
-  // Head
-  ellipse(HeadX, HeadY, 30, 30);
-
-  // Belly
-  ellipse(HeadX + 5, HeadY + 25, 20, 20);
-
-  // Tail
-  beginShape();
-  vertex(HeadX + 15, HeadY);
-  vertex(HeadX + 15, HeadY + 25);
-  vertex(HeadX + 5, HeadY + 35);
-  vertex(HeadX - 40, HeadY +35);
-  vertex(HeadX - 14, HeadY - 6);
+  fill(250, 169, 20); // Orange
+  vertex(90, 45);
+  quadraticVertex(78, 47, 80, 58);
+  quadraticVertex(84, 48, 100, 58);
   endShape(CLOSE);
 
-  // Draw eye
-  fill(255);
-  ellipse(HeadX + 2, HeadY - 2, pupil_size + 7, pupil_size + 7);
-  fill(40);
-  ellipse(HeadX + 2, HeadY - 2, pupil_size, pupil_size);
+  // Body
+  fill(252, 219, 3); // Yellow
 
-  // Draw wing
-  noFill();
-  stroke(240, 179, 12); // Orange
-  strokeWeight(line_weight);
-  arc(HeadX - 15, HeadY + 13, 20, 20, 0, 90);
-  line(HeadX - 32.5, HeadY + 23, HeadX - 15, HeadY + 23);
-  line(HeadX - 27, HeadY + 23, HeadX - 23, HeadY + 18);
-  line(HeadX - 20, HeadY + 23, HeadX - 16, HeadY + 18);
+  beginShape();
+  vertex(101, 91);
+  vertex(88, 53);
+  vertex(110.5, 43);
+  vertex(165, 106);
+  quadraticVertex(110, 100, 115, 70);
+  endShape(CLOSE);
+
+  ellipse(100, 50, 25, 25);
+  ellipse(120, 85, 40, 40);
+  ellipse(138, 170, 10, 10);
+
+  beginShape();
+  vertex(133, 170);
+  vertex(123, 100);
+  vertex(143, 90);
+  vertex(143, 170);
+  endShape(CLOSE);
+
+  // Eyes
+  fill(255); // White
+  ellipse(99, 50, 11, 11);
+
+  fill(0); // Black
+  ellipse(99, 50, 6, 6);
+
+
 }
