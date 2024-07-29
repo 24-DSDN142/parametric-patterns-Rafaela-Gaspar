@@ -16,6 +16,40 @@ function wallpaper_background() {
 }
 
 function my_symbol() {
+  // Millet Stalk
+  noFill();
+  bezier(52, 70, 45, 100, 50, 146, 95, 160);
+
+  // Millet 1 (Top)
+  ellipse(51, 75, 17, 17);
+  triangle(43.5, 71, 59.5, 75, 58, 53);
+
+  // Millet 2
+  ellipse(52, 110, 18, 18);
+  beginShape();
+  vertex(43.5, 113);
+  vertex(33, 92);
+  quadraticVertex(43, 92, 50, 101);
+  quadraticVertex(52, 92, 62, 88);
+  vertex(61, 110);
+  endShape(CLOSE);
+
+  // Millet 3
+  ellipse(65, 140, 19, 19);
+  beginShape();
+  vertex(57, 145);
+  vertex(40, 135);
+  endShape(CLOSE);
+
+  //Millet 4 (Bottom)
+  ellipse(95, 160, 20, 20);
+  beginShape();
+  vertex(92, 169.5);
+  vertex(68, 166);
+  quadraticVertex(74, 157, 85.5, 156);
+  quadraticVertex(81, 145, 86, 135);
+  vertex(102.5, 153.5);
+  endShape(CLOSE);
 
   // Leaf
   draw_leaf(160, 50); // Originally 160, 50
