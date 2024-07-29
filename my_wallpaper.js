@@ -16,95 +16,97 @@ function wallpaper_background() {
 }
 
 function my_symbol() {
-  // Millet Stalk
-  stroke(105, 48, 20); // Brown
-  strokeWeight(3);
-  noFill();
-  bezier(52, 70, 45, 100, 50, 146, 95, 160);
-  strokeWeight(1);
-  fill(196, 161, 79); // Tan
-
-  // Millet 1 (Top)
-  noStroke();
-  ellipse(51, 75, 17, 17);
-  triangle(43.7, 70.5, 59.5, 75, 58, 52);
-
-  stroke(105, 48, 20); // Brown
-  line(43.7, 70.5, 58, 52); 
-  line(59.5, 75, 58, 52);
-  arc(51, 75, 17, 17, 0, 210);
-
-  // Millet 2
-  noStroke();
-  ellipse(52, 110, 18, 18);
-  beginShape();
-  vertex(43.5, 113);
-  vertex(33, 92);
-  quadraticVertex(43, 92, 50, 101);
-  quadraticVertex(52, 92, 62, 88);
-  vertex(61, 110);
-  endShape(CLOSE);
-
-  stroke(105, 48, 20); // Brown
-  beginShape();
-  vertex(43.5, 113);
-  vertex(33, 92);
-  quadraticVertex(43, 92, 50, 101);
-  quadraticVertex(52, 92, 62, 88);
-  vertex(61, 110);
-  endShape();
-  arc(52, 110, 18, 18, 0, 160);
-
-  // Millet 3
-  noStroke();
-  ellipse(65, 140, 19, 19);
-  beginShape();
-  vertex(58.5, 147);
-  vertex(40, 135);
-  quadraticVertex(48, 130.5, 59, 132);
-  quadraticVertex(59, 123, 67, 115);
-  vertex(73.5, 135.5);
-  endShape(CLOSE);
-
-  stroke(105, 48, 20); // Brown
-  beginShape();
-  vertex(58.5, 147);
-  vertex(40, 135);
-  quadraticVertex(48, 130.5, 59, 132);
-  quadraticVertex(59, 123, 67, 115);
-  vertex(73.5, 135.5);
-  endShape();
-  arc(65, 140, 19, 19, 337, 130);
-
-  //Millet 4 (Bottom)
-  noStroke();
-  ellipse(95, 160, 20, 20);
-  beginShape();
-  vertex(92, 169.5);
-  vertex(68, 166);
-  quadraticVertex(74, 157, 85.5, 156);
-  quadraticVertex(81, 145, 86, 135);
-  vertex(102.5, 153.5);
-  endShape(CLOSE);
-
-  stroke(105, 48, 20); // Brown
-  beginShape();
-  vertex(92, 169.5);
-  vertex(68, 166);
-  quadraticVertex(74, 157, 85.5, 156);
-  quadraticVertex(81, 145, 86, 135);
-  vertex(102.5, 153.5);
-  endShape();
-  arc(95, 160, 20, 20, 320, 110);
+  // Millet
+  draw_millet(51, 75); // Originally 51, 75
 
   // Leaf
   draw_leaf(160, 50); // Originally 160, 50
 
   // Taco
   draw_taco(100, 50); // Originally 100, 50
+}
 
+function draw_millet (MilletX, MilletY) {
+  // Millet Stalk
+  stroke(105, 48, 20); // Brown
+  strokeWeight(3);
+  noFill();
+  bezier(MilletX + 1, MilletY - 5, MilletX - 6, MilletY + 25, MilletX - 1, MilletY + 70, MilletX + 44, MilletY + 85);
+  strokeWeight(1);
+  fill(196, 161, 79); // Tan
 
+  // Millet 1 (Top)
+  noStroke();
+  ellipse(MilletX, MilletY, 17, 17);
+  triangle(MilletX - 7.3, MilletY - 4.5, MilletX + 8.5, MilletY, MilletX + 7, MilletY - 23);
 
+  stroke(105, 48, 20); // Brown
+  line(MilletX - 7.3, MilletY - 4.5, MilletX + 7, MilletY - 23); 
+  line(MilletX + 8.5, MilletY, MilletX + 7, MilletY - 23);
+  arc(MilletX, MilletY, 17, 17, 0, 210);
+
+  // Millet 2
+  noStroke();
+  ellipse(MilletX + 1, MilletY + 35, 18, 18);
+  beginShape();
+  vertex(MilletX - 7.5, MilletY + 38);
+  vertex(MilletX - 20, MilletY + 17);
+  quadraticVertex(MilletX - 8, MilletY + 17, MilletX - 1, MilletY + 26);
+  quadraticVertex(MilletX + 1, MilletY + 17, MilletX + 13, MilletY + 13);
+  vertex(MilletX + 10, MilletY + 35);
+  endShape(CLOSE);
+
+  stroke(105, 48, 20); // Brown
+  beginShape();
+  vertex(MilletX - 7.5, MilletY + 38);
+  vertex(MilletX - 20, MilletY + 17);
+  quadraticVertex(MilletX - 8, MilletY + 17, MilletX - 1, MilletY + 26);
+  quadraticVertex(MilletX + 1, MilletY + 17, MilletX + 13, MilletY + 13);
+  vertex(MilletX + 10, MilletY + 35);
+  endShape();
+  arc(MilletX + 1, MilletY + 35, 18, 18, 0, 160);
+
+  // Millet 3
+  noStroke();
+  ellipse(MilletX + 14, MilletY + 65, 19, 19);
+  beginShape();
+  vertex(MilletX + 7.5, MilletY + 72);
+  vertex(MilletX - 11, MilletY + 60);
+  quadraticVertex(MilletX - 3, MilletY+ 55.5, MilletX + 8, MilletY + 57);
+  quadraticVertex(MilletX + 8, MilletY + 48, MilletX + 16, MilletY + 40);
+  vertex(MilletX + 22.5, MilletY + 60.5);
+  endShape(CLOSE);
+
+  stroke(105, 48, 20); // Brown
+  beginShape();
+  vertex(MilletX + 7.5, MilletY + 72);
+  vertex(MilletX - 11, MilletY + 60);
+  quadraticVertex(MilletX - 3, MilletY+ 55.5, MilletX + 8, MilletY + 57);
+  quadraticVertex(MilletX + 8, MilletY + 48, MilletX + 16, MilletY + 40);
+  vertex(MilletX + 22.5, MilletY + 60.5);
+  endShape();
+  arc(MilletX + 14, MilletY + 65, 19, 19, 337, 130);
+
+  //Millet 4 (Bottom)
+  noStroke();
+  ellipse(MilletX + 44, MilletY + 85, 20, 20);
+  beginShape();
+  vertex(MilletX + 41, MilletY + 94.5);
+  vertex(MilletX + 17, MilletY + 91);
+  quadraticVertex(MilletX + 23, MilletY + 82, MilletX + 34.5, MilletY + 81);
+  quadraticVertex(MilletX + 30, MilletY + 70, MilletX + 35, MilletY + 60);
+  vertex(MilletX + 51.5, MilletY + 78.5);
+  endShape(CLOSE);
+
+  stroke(105, 48, 20); // Brown
+  beginShape();
+  vertex(MilletX + 41, MilletY + 94.5);
+  vertex(MilletX + 17, MilletY + 91);
+  quadraticVertex(MilletX + 23, MilletY + 82, MilletX + 34.5, MilletY + 81);
+  quadraticVertex(MilletX + 30, MilletY + 70, MilletX + 35, MilletY + 60);
+  vertex(MilletX + 51.5, MilletY + 78.5);
+  endShape();
+  arc(MilletX + 44, MilletY + 85, 20, 20, 320, 110);  
 }
 
 function draw_leaf (LeafX, LeafY) {
