@@ -1,14 +1,14 @@
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 200;
-  pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.cell_width  = 180;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 90;
 }
 
 function wallpaper_background() {
@@ -17,13 +17,13 @@ function wallpaper_background() {
 
 function my_symbol() {
   // Millet
-  draw_millet(51, 75); // Originally 51, 75
+  draw_millet(25, 65); // Originally 50, 75
 
   // Leaf
-  draw_leaf(160, 50); // Originally 160, 50
+  draw_leaf(160, 40); // Originally 160, 50
 
   // Taco
-  draw_taco(100, 50); // Originally 100, 50
+  draw_taco(85, 40); // Originally 100, 50
 }
 
 function draw_millet (MilletX, MilletY) {
