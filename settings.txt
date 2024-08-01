@@ -1,54 +1,294 @@
-You will need to fill out this file for hand in. 
-
-The bellow is just an example, feel free to disregard this documents contents.
-
-
-Your final settings.txt will look something like this when you are finished:
-
-/////////////////////////////////
-
 Wallpaper 1:
 
-//your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+// These variables change the appearance of the overall wallpaper
+let LineThickness = 1 // Sets the drawing's linework thickness: ideal values are between 0 and 3
+let ColourMode = 1 // Sets colour theme of wallpaper: 1 is natural colours, 2 is bright colours, 3 is monochrome
+let BackgroundMode = 3 // Sets background mode of wallpaper: 1 is blank, 2 is stripes, 3 is circles
+
+// These variables change the size of Taco's beak and eye
+let BottomBeak = 11 // Sets the size of the bottom of the beak: ideal values are between 7 and 13
+let TopBeak = 20 // Sets the length of the top of the beak: ideal values are between 17 and 25
+let PupilSize = 6 // Sets the size of the pupil: ideal values are between 1 and 8
+
+// These variables contain coordinate values to change position of each element
+let MilletX = 25 // Sets X coordinates of Millet drawing (controlled by the position of the top leaf)
+let MilletY = 65 // Sets Y coordinates of Millet drawing (controlled by the position of the top leaf)
+let LeafX = 160 // Sets X coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let LeafY = 40 // Sets Y coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let HeadX = 85 // Sets X coordinates of Taco drawing (controlled by the position of Taco's head)
+let HeadY = 40 // Sets Y coordinates of Taco drawing (controlled by the position of Taco's head)
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false);
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = 180;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 90;
 }
 
 /////////////////////////////////
 
 Wallpaper 2:
 
-//your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+// These variables change the appearance of the overall wallpaper
+let LineThickness = 1 // Sets the drawing's linework thickness: ideal values are between 0 and 3
+let ColourMode = 2 // Sets colour theme of wallpaper: 1 is natural colours, 2 is bright colours, 3 is monochrome
+let BackgroundMode = 2 // Sets background mode of wallpaper: 1 is blank, 2 is stripes, 3 is circles
+
+// These variables change the size of Taco's beak and eye
+let BottomBeak = 11 // Sets the size of the bottom of the beak: ideal values are between 7 and 13
+let TopBeak = 20 // Sets the length of the top of the beak: ideal values are between 17 and 25
+let PupilSize = 6 // Sets the size of the pupil: ideal values are between 1 and 8
+
+// These variables contain coordinate values to change position of each element
+let MilletX = 120 // Sets X coordinates of Millet drawing (controlled by the position of the top leaf)
+let MilletY = 80 // Sets Y coordinates of Millet drawing (controlled by the position of the top leaf)
+let LeafX = 157 // Sets X coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let LeafY = 60 // Sets Y coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let HeadX = 27 // Sets X coordinates of Taco drawing (controlled by the position of Taco's head)
+let HeadY = 15 // Sets Y coordinates of Taco drawing (controlled by the position of Taco's head)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 180;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 90;
+}
+
+/////////////////////////////////
+
+Wallpaper 3:
+
+// These variables change the appearance of the overall wallpaper
+let LineThickness = 0 // Sets the drawing's linework thickness: ideal values are between 0 and 3
+let ColourMode = 1 // Sets colour theme of wallpaper: 1 is natural colours, 2 is bright colours, 3 is monochrome
+let BackgroundMode = 1 // Sets background mode of wallpaper: 1 is blank, 2 is stripes, 3 is circles
+
+// These variables change the size of Taco's beak and eye
+let BottomBeak = 11 // Sets the size of the bottom of the beak: ideal values are between 7 and 13
+let TopBeak = 20 // Sets the length of the top of the beak: ideal values are between 17 and 25
+let PupilSize = 6 // Sets the size of the pupil: ideal values are between 1 and 8
+
+// These variables contain coordinate values to change position of each element
+let MilletX = 25 // Sets X coordinates of Millet drawing (controlled by the position of the top leaf)
+let MilletY = 65 // Sets Y coordinates of Millet drawing (controlled by the position of the top leaf)
+let LeafX = 160 // Sets X coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let LeafY = 40 // Sets Y coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let HeadX = 85 // Sets X coordinates of Taco drawing (controlled by the position of Taco's head)
+let HeadY = 40 // Sets Y coordinates of Taco drawing (controlled by the position of Taco's head)
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false);
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.cell_width  = 180;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 90;
+}
+
+/////////////////////////////////
+
+Wallpaper 4:
+
+// These variables change the appearance of the overall wallpaper
+let LineThickness = 3 // Sets the drawing's linework thickness: ideal values are between 0 and 3
+let ColourMode = 3 // Sets colour theme of wallpaper: 1 is natural colours, 2 is bright colours, 3 is monochrome
+let BackgroundMode = 1 // Sets background mode of wallpaper: 1 is blank, 2 is stripes, 3 is circles
+
+// These variables change the size of Taco's beak and eye
+let BottomBeak = 13 // Sets the size of the bottom of the beak: ideal values are between 7 and 13
+let TopBeak = 25 // Sets the length of the top of the beak: ideal values are between 17 and 25
+let PupilSize = 1 // Sets the size of the pupil: ideal values are between 1 and 8
+
+// These variables contain coordinate values to change position of each element
+let MilletX = 25 // Sets X coordinates of Millet drawing (controlled by the position of the top leaf)
+let MilletY = 65 // Sets Y coordinates of Millet drawing (controlled by the position of the top leaf)
+let LeafX = 160 // Sets X coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let LeafY = 40 // Sets Y coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let HeadX = 85 // Sets X coordinates of Taco drawing (controlled by the position of Taco's head)
+let HeadY = 40 // Sets Y coordinates of Taco drawing (controlled by the position of Taco's head)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 180;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 5:
+
+// These variables change the appearance of the overall wallpaper
+let LineThickness = 0.3 // Sets the drawing's linework thickness: ideal values are between 0 and 3
+let ColourMode = 3 // Sets colour theme of wallpaper: 1 is natural colours, 2 is bright colours, 3 is monochrome
+let BackgroundMode = 2 // Sets background mode of wallpaper: 1 is blank, 2 is stripes, 3 is circles
+
+// These variables change the size of Taco's beak and eye
+let BottomBeak = 10 // Sets the size of the bottom of the beak: ideal values are between 7 and 13
+let TopBeak = 20 // Sets the length of the top of the beak: ideal values are between 17 and 25
+let PupilSize = 5 // Sets the size of the pupil: ideal values are between 1 and 8
+
+// These variables contain coordinate values to change position of each element
+let MilletX = 35 // Sets X coordinates of Millet drawing (controlled by the position of the top leaf)
+let MilletY = 30 // Sets Y coordinates of Millet drawing (controlled by the position of the top leaf)
+let LeafX = 30 // Sets X coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let LeafY = 140 // Sets Y coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let HeadX = 100 // Sets X coordinates of Taco drawing (controlled by the position of Taco's head)
+let HeadY = 40 // Sets Y coordinates of Taco drawing (controlled by the position of Taco's head)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 180;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 90;
+}
+
+/////////////////////////////////
+
+Wallpaper 6:
+
+// These variables change the appearance of the overall wallpaper
+let LineThickness = 1.5 // Sets the drawing's linework thickness: ideal values are between 0 and 3
+let ColourMode = 2 // Sets colour theme of wallpaper: 1 is natural colours, 2 is bright colours, 3 is monochrome
+let BackgroundMode = 3 // Sets background mode of wallpaper: 1 is blank, 2 is stripes, 3 is circles
+
+// These variables change the size of Taco's beak and eye
+let BottomBeak = 10 // Sets the size of the bottom of the beak: ideal values are between 7 and 13
+let TopBeak = 20 // Sets the length of the top of the beak: ideal values are between 17 and 25
+let PupilSize = 11 // Sets the size of the pupil: ideal values are between 1 and 8
+
+// These variables contain coordinate values to change position of each element
+let MilletX = 35 // Sets X coordinates of Millet drawing (controlled by the position of the top leaf)
+let MilletY = 30 // Sets Y coordinates of Millet drawing (controlled by the position of the top leaf)
+let LeafX = 30 // Sets X coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let LeafY = 150 // Sets Y coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let HeadX = 100 // Sets X coordinates of Taco drawing (controlled by the position of Taco's head)
+let HeadY = 40 // Sets Y coordinates of Taco drawing (controlled by the position of Taco's head)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 180;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 60;
+}
+
+/////////////////////////////////
+
+Wallpaper 7:
+
+// These variables change the appearance of the overall wallpaper
+let LineThickness = 1 // Sets the drawing's linework thickness: ideal values are between 0 and 3
+let ColourMode = 3 // Sets colour theme of wallpaper: 1 is natural colours, 2 is bright colours, 3 is monochrome
+let BackgroundMode = 3 // Sets background mode of wallpaper: 1 is blank, 2 is stripes, 3 is circles
+
+// These variables change the size of Taco's beak and eye
+let BottomBeak = 10 // Sets the size of the bottom of the beak: ideal values are between 7 and 13
+let TopBeak = 20 // Sets the length of the top of the beak: ideal values are between 17 and 25
+let PupilSize = 6 // Sets the size of the pupil: ideal values are between 1 and 8
+
+// These variables contain coordinate values to change position of each element
+let MilletX = 30 // Sets X coordinates of Millet drawing (controlled by the position of the top leaf)
+let MilletY = 60 // Sets Y coordinates of Millet drawing (controlled by the position of the top leaf)
+let LeafX = 160 // Sets X coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let LeafY = 145 // Sets Y coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let HeadX = 80 // Sets X coordinates of Taco drawing (controlled by the position of Taco's head)
+let HeadY = 30 // Sets Y coordinates of Taco drawing (controlled by the position of Taco's head)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 180;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset
+}
+
+/////////////////////////////////
+
+Wallpaper 8:
+
+// These variables change the appearance of the overall wallpaper
+let LineThickness = 0 // Sets the drawing's linework thickness: ideal values are between 0 and 3
+let ColourMode = 2 // Sets colour theme of wallpaper: 1 is natural colours, 2 is bright colours, 3 is monochrome
+let BackgroundMode = 1 // Sets background mode of wallpaper: 1 is blank, 2 is stripes, 3 is circles
+
+// These variables change the size of Taco's beak and eye
+let BottomBeak = 9 // Sets the size of the bottom of the beak: ideal values are between 7 and 13
+let TopBeak = 23 // Sets the length of the top of the beak: ideal values are between 17 and 25
+let PupilSize = 3 // Sets the size of the pupil: ideal values are between 1 and 8
+
+// These variables contain coordinate values to change position of each element
+let MilletX = 30 // Sets X coordinates of Millet drawing (controlled by the position of the top leaf)
+let MilletY = 60 // Sets Y coordinates of Millet drawing (controlled by the position of the top leaf)
+let LeafX = 160 // Sets X coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let LeafY = 145 // Sets Y coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let HeadX = 80 // Sets X coordinates of Taco drawing (controlled by the position of Taco's head)
+let HeadY = 30 // Sets Y coordinates of Taco drawing (controlled by the position of Taco's head)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 180;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 9:
+
+// These variables change the appearance of the overall wallpaper
+let LineThickness = 3 // Sets the drawing's linework thickness: ideal values are between 0 and 3
+let ColourMode = 1 // Sets colour theme of wallpaper: 1 is natural colours, 2 is bright colours, 3 is monochrome
+let BackgroundMode = 2 // Sets background mode of wallpaper: 1 is blank, 2 is stripes, 3 is circles
+
+// These variables change the size of Taco's beak and eye
+let BottomBeak = 13 // Sets the size of the bottom of the beak: ideal values are between 7 and 13
+let TopBeak = 23 // Sets the length of the top of the beak: ideal values are between 17 and 25
+let PupilSize = 1 // Sets the size of the pupil: ideal values are between 1 and 8
+
+// These variables contain coordinate values to change position of each element
+let MilletX = 30 // Sets X coordinates of Millet drawing (controlled by the position of the top leaf)
+let MilletY = 60 // Sets Y coordinates of Millet drawing (controlled by the position of the top leaf)
+let LeafX = 160 // Sets X coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let LeafY = 145 // Sets Y coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
+let HeadX = 80 // Sets X coordinates of Taco drawing (controlled by the position of Taco's head)
+let HeadY = 30 // Sets Y coordinates of Taco drawing (controlled by the position of Taco's head)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 180;
+  pWallpaper.grid_settings.cell_height = 180;
   pWallpaper.grid_settings.row_offset  = 0;
 }
