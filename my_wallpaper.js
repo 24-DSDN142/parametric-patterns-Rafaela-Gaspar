@@ -1,5 +1,5 @@
-let LineThickness = 1 // Sets the drawing's linework thickness: ideal values are between 0.1 and 3
-let ColourMode = 2 // Sets colour theme of wallpaper: 1 is natural colours, 2 is bright colours, 3 is monochrome
+let LineThickness = 1 // Sets the drawing's linework thickness: ideal values are between 0.5 and 3
+let ColourMode = 3 // Sets colour theme of wallpaper: 1 is natural colours, 2 is bright colours, 3 is monochrome
 let BackgroundMode = 3 // Sets background mode of wallpaper: 1 is blank, 2 is stripes, 3 is circles
 
 let MilletX = 25 // Sets X coordinates of Millet drawing (controlled by the position of the top leaf)
@@ -21,7 +21,18 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(41, 143, 109); // Green
+  if (ColourMode == 1) {
+    background(41, 143, 109); // Green
+  }
+  else if (ColourMode == 2) {
+    background(255, 232, 140); // Yellow
+  }
+  else if (ColourMode == 3) {
+    background(41, 143, 109); // CHANGE COLOUR HERE
+  }
+  else {
+    background(41, 143, 109); // Green
+  }
 }
 
 function my_symbol() {
@@ -62,7 +73,7 @@ function draw_background_stripes () {
   }
   else if(ColourMode == 2) {
     noStroke();
-    fill(32, 125, 100); // CHANGE COLOUR HERE
+    fill(255, 204, 89); // Dark Yellow
     rect(0, 0, 180, 15);
     rect(0, 30, 180, 15);
     rect(0, 60, 180, 15);
@@ -96,7 +107,7 @@ function draw_background_circles () {
   }
   else if(ColourMode == 2) {
     noStroke();
-    fill(32, 125, 100); // CHANGE COLOUR HERE
+    fill(255, 204, 89); // Dark Yellow
 
     ellipse(20, 15, 30, 30);
     ellipse(40, 80, 60, 60);
@@ -203,19 +214,19 @@ function draw_millet (MilletX, MilletY) {
   }
   else if(ColourMode == 2) {
     // Millet Stalk
-    stroke(105, 48, 20); // CHANGE COLOUR HERE
+    stroke(153, 34, 41); // Darker Pink
     strokeWeight(LineThickness + (LineThickness * 2));
     noFill();
     bezier(MilletX + 1, MilletY - 5, MilletX - 6, MilletY + 25, MilletX - 1, MilletY + 70, MilletX + 44, MilletY + 85);
     strokeWeight(LineThickness);
-    fill(196, 161, 79); // CHANGE COLOUR HERE
+    fill(252, 167, 198); // Pink
 
     // Millet 1 (Top)
     noStroke();
     ellipse(MilletX, MilletY, 17, 17);
     triangle(MilletX - 7.3, MilletY - 4.5, MilletX + 8.5, MilletY, MilletX + 7, MilletY - 23);
 
-    stroke(105, 48, 20); // CHANGE COLOUR HERE
+    stroke(153, 34, 41); // Darker Pink
     line(MilletX - 7.3, MilletY - 4.5, MilletX + 7, MilletY - 23); 
     line(MilletX + 8.5, MilletY, MilletX + 7, MilletY - 23);
     arc(MilletX, MilletY, 17, 17, 0, 210);
@@ -231,7 +242,7 @@ function draw_millet (MilletX, MilletY) {
     vertex(MilletX + 10, MilletY + 35);
     endShape(CLOSE);
 
-    stroke(105, 48, 20); // CHANGE COLOUR HERE
+    stroke(153, 34, 41); // Darker Pink
     beginShape();
     vertex(MilletX - 7.5, MilletY + 38);
     vertex(MilletX - 20, MilletY + 17);
@@ -252,7 +263,7 @@ function draw_millet (MilletX, MilletY) {
     vertex(MilletX + 22.5, MilletY + 60.5);
     endShape(CLOSE);
 
-    stroke(105, 48, 20); // CHANGE COLOUR HERE
+    stroke(153, 34, 41); // Darker Pink
     beginShape();
     vertex(MilletX + 7.5, MilletY + 72);
     vertex(MilletX - 11, MilletY + 60);
@@ -273,7 +284,7 @@ function draw_millet (MilletX, MilletY) {
     vertex(MilletX + 51.5, MilletY + 78.5);
     endShape(CLOSE);
 
-    stroke(105, 48, 20); // CHANGE COLOUR HERE
+    stroke(153, 34, 41); // Darker Pink
     beginShape();
     vertex(MilletX + 41, MilletY + 94.5);
     vertex(MilletX + 17, MilletY + 91);
@@ -389,7 +400,7 @@ function draw_leaf (LeafX, LeafY) {
   }
   else if(ColourMode == 2) {
     // Leaf
-    fill(17, 97, 39); // CHANGE COLOUR HERE
+    fill(94, 107, 191); // Dark Blue
     noStroke();
     ellipse(LeafX, LeafY, 20, 20);
     beginShape();
@@ -399,7 +410,7 @@ function draw_leaf (LeafX, LeafY) {
     endShape(CLOSE);
 
     // Linework
-    stroke(8, 59, 48); // CHANGE COLOUR HERE
+    stroke(13, 24, 89); // Darker Blue
     arc(LeafX, LeafY, 20, 20, 140, 0);
     line(LeafX - 8.5, LeafY + 5.5, LeafX + 10, LeafY + 26);
     line(LeafX + 10, LeafY + 26, LeafX + 10, LeafY);
@@ -484,7 +495,7 @@ function draw_taco(HeadX, HeadY) {
 
     // Linework
     noFill();
-    stroke(191, 140, 0);
+    stroke(191, 140, 0); // Dark Yellow
     beginShape();
     vertex(HeadX + 10.5, HeadY - 7);
     vertex(HeadX + 65, HeadY + 56);
@@ -512,10 +523,10 @@ function draw_taco(HeadX, HeadY) {
   }
   else if(ColourMode == 2) {
     // Beak
-    fill(217, 114, 4); // CHANGE COLOUR HERE
-    stroke(163, 63, 0); // CHANGE COLOUR HERE
+    fill(189, 94, 104); // Dark Pink
+    stroke(153, 34, 41); // Darker Pink
     ellipse(HeadX - 12, HeadY + 2, 12, 11);
-    fill(250, 169, 20);// CHANGE COLOUR HERE
+    fill(252, 167, 198); // Pink
     beginShape();
     vertex(HeadX - 10, HeadY - 5);
     quadraticVertex(HeadX - 22, HeadY - 3, HeadX - 20, HeadY + 8);
@@ -523,7 +534,7 @@ function draw_taco(HeadX, HeadY) {
     endShape(CLOSE);
 
     // Body
-    fill(252, 219, 3); // CHANGE COLOUR HERE
+    fill(114, 236, 247); // Blue
     noStroke();
     beginShape();
     vertex(HeadX + 1, HeadY + 41);
@@ -566,7 +577,7 @@ function draw_taco(HeadX, HeadY) {
 
     // Linework
     noFill();
-    stroke(191, 140, 0);
+    stroke(13, 75, 145); // Dark Blue
     beginShape();
     vertex(HeadX + 10.5, HeadY - 7);
     vertex(HeadX + 65, HeadY + 56);
@@ -581,14 +592,14 @@ function draw_taco(HeadX, HeadY) {
 
     // Feet
     strokeWeight(LineThickness + 2);
-    stroke(217, 114, 4); // CHANGE COLOUR HERE
+    stroke(189, 94, 104); // Dark Pink
     line(HeadX + 20, HeadY + 52, HeadX + 14, HeadY + 58);
     line(HeadX + 20, HeadY + 52, HeadX + 18, HeadY + 60);
     line(HeadX + 10, HeadY + 50, HeadX + 4, HeadY + 56);
     line(HeadX + 10, HeadY + 50, HeadX + 8, HeadY + 58);
 
     // Cheek Feathers
-    stroke(23, 164, 207); // CHANGE COLOUR HERE
+    stroke(94, 107, 191); // Dark Blue
     line(HeadX, HeadY + 10, HeadX + 1, HeadY + 13);
     line(HeadX + 5, HeadY + 8, HeadX + 6.5, HeadY + 10.5);
   }
