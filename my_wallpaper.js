@@ -17,8 +17,8 @@ let HeadX = 85 // Sets X coordinates of Taco drawing (controlled by the position
 let HeadY = 40 // Sets Y coordinates of Taco drawing (controlled by the position of Taco's head)
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false);
 
   //Grid settings
