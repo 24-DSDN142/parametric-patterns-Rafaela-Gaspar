@@ -1,16 +1,23 @@
+// These variables change the appearance of the overall wallpaper
 let LineThickness = 1 // Sets the drawing's linework thickness: ideal values are between 0 and 3
 let ColourMode = 1 // Sets colour theme of wallpaper: 1 is natural colours, 2 is bright colours, 3 is monochrome
 let BackgroundMode = 3 // Sets background mode of wallpaper: 1 is blank, 2 is stripes, 3 is circles
 
+// These variables change the size of Taco's beak and eye
+let BottomBeak = 11 // Sets the size of the bottom of the beak: ideal values are between 7 and 13
+let TopBeak = 20 // Sets the length of the top of the beak: ideal values are between 17 and 25
+let PupilSize = 6 // Sets the size of the pupil: ideal values are between 1 and 8
+
+// These variables contain coordinate values to change position of each element
 let MilletX = 25 // Sets X coordinates of Millet drawing (controlled by the position of the top leaf)
 let MilletY = 65 // Sets Y coordinates of Millet drawing (controlled by the position of the top leaf)
 let LeafX = 160 // Sets X coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
 let LeafY = 40 // Sets Y coordinates of Leaf drawing (controlled by the position of the leaf's ellipse)
-let HeadX = 85 // Sets X coordinates of Taco drawing (controlled by the position of the head)
-let HeadY = 40 // Sets Y coordinates of Taco drawing (controlled by the position of the head)
+let HeadX = 85 // Sets X coordinates of Taco drawing (controlled by the position of Taco's head)
+let HeadY = 40 // Sets Y coordinates of Taco drawing (controlled by the position of Taco's head)
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false);
 
@@ -291,7 +298,7 @@ function draw_taco(HeadX, HeadY) {
     stroke(86); // Grey
   }
   
-  ellipse(HeadX - 12, HeadY + 2, 12, 11);
+  ellipse(HeadX - 12, HeadY + 2, BottomBeak, BottomBeak);
 
   if(ColourMode == 1) {
     fill(250, 169, 20); // Orange
@@ -305,7 +312,7 @@ function draw_taco(HeadX, HeadY) {
   
   beginShape();
   vertex(HeadX - 10, HeadY - 5);
-  quadraticVertex(HeadX - 22, HeadY - 3, HeadX - 20, HeadY + 8);
+  quadraticVertex(HeadX - 22, HeadY - 3, HeadX - TopBeak, HeadY + 8);
   quadraticVertex(HeadX - 16, HeadY - 2, HeadX, HeadY + 8);
   endShape(CLOSE);
 
@@ -349,7 +356,7 @@ function draw_taco(HeadX, HeadY) {
     ellipse(HeadX - 1.5, HeadY - 1, 11, 11);
 
     fill(40); // Black
-    ellipse(HeadX - 1.5, HeadY - 1, 3, 3);    
+    ellipse(HeadX - 1.5, HeadY - 1, PupilSize - (PupilSize / 2), PupilSize - (PupilSize / 2));    
   }
   else {
     fill(255); // White
@@ -357,7 +364,7 @@ function draw_taco(HeadX, HeadY) {
     ellipse(HeadX - 1.5, HeadY - 1, 11, 11);
 
     fill(40); // Black
-    ellipse(HeadX - 1.5, HeadY - 1, 6, 6);
+    ellipse(HeadX - 1.5, HeadY - 1, PupilSize, PupilSize);
   }
 
   // Linework
